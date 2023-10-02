@@ -3,7 +3,7 @@ using namespace std;
 
 void printBoard(string board[3][3]);
 void newMove(string tokens[2], int turn, string board[3][3]);
-bool checkWin(string board[3][3], bool tie);
+bool checkWin(string board[3][3], bool& tie);
 
 int main() {
   // initialize tictactoe board
@@ -76,7 +76,7 @@ void newMove(string tokens[2], int turn, string board[3][3]) {
 
 }
 
-bool checkWin(string board[3][3], bool tie) {
+bool checkWin(string board[3][3], bool& tie) {
   // check if there is a winner
 
   for (int i=0; i < 3; i++) {
